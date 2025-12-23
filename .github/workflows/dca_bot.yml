@@ -5,7 +5,7 @@ on:
   # SCHEDULE: Uncomment ONE of the lines below to choose frequency
   # -------------------------------------------------------
   schedule:
-    # OPTION 1: DAILY at 09:00 AM Bangkok Time (02:00 UTC) <-- CURRENT
+    # OPTION 1: DAILY at 09:00 AM Bangkok Time (02:00 UTC)
     # - cron: '0 2 * * *'
 
     # OPTION 2: WEEKLY on Monday at 09:00 AM BKK
@@ -17,7 +17,7 @@ on:
     # OPTION 4: EVERY 12 HOURS (09:00 AM and 09:00 PM BKK)
     # - cron: '0 2,14 * * *'
 
-    # OPTION 5: EVERY 10 MINUTES
+    # OPTION 5: EVERY 10 MINUTES <-- CURRENT
     - cron: '*/10 * * * *'
 
   # -------------------------------------------------------
