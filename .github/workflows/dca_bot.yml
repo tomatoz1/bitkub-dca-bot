@@ -18,10 +18,7 @@ on:
     # - cron: '0 2,14 * * *'
 
     # OPTION 5: EVERY 10 MINUTES
-    # - cron: '*/10 * * * *'
-
-    # OPTION 6: EVERY 5 MINUTES (minimum interval allowed by GitHub Actions)
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
 
   # -------------------------------------------------------
   # MANUAL TRIGGER: Allows you to run this on demand
