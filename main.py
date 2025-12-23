@@ -14,8 +14,8 @@ API_KEY = os.environ.get("API_KEY")
 API_SECRET = os.environ.get("API_SECRET")
 # Default to 500 THB if not set
 BUY_AMOUNT = float(os.environ.get("BUY_AMOUNT", "500"))
-# V3 API usually expects lowercase "btc_thb" or "thb_btc" depending on account migration
-SYMBOL = os.environ.get("SYMBOL", "btc_thb")
+# Default to 'BTC_THB' if not set
+SYMBOL = os.environ.get("SYMBOL", "BTC_THB")
 
 
 def get_server_time():

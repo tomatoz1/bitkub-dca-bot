@@ -18,7 +18,10 @@ on:
     # - cron: '0 2,14 * * *'
 
     # OPTION 5: EVERY 10 MINUTES
-    - cron: '*/10 * * * *'
+    # - cron: '*/10 * * * *'
+
+    # OPTION 6: EVERY 1 MINUTES
+    - cron: '*/1 * * * *'
 
   # -------------------------------------------------------
   # MANUAL TRIGGER: Allows you to run this on demand
@@ -30,9 +33,9 @@ on:
         required: false
         default: '500'
       manual_symbol:
-        description: 'Crypto Pair (e.g., btc_thb)'
+        description: 'Crypto Pair (e.g., BTC_THB)'
         required: false
-        default: 'btc_thb'
+        default: 'BTC_THB'
 
 jobs:
   trade:
