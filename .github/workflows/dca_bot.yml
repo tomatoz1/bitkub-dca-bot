@@ -54,13 +54,13 @@ jobs:
 
       - name: Run Trading Bot
         env:
-          BITKUB_API_KEY: ${{ secrets.BITKUB_API_KEY }}
-          BITKUB_API_SECRET: ${{ secrets.BITKUB_API_SECRET }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
           
           # LOGIC: Use Manual Input if provided, otherwise use Default '500'
           BUY_AMOUNT: ${{ github.event.inputs.manual_amount || '500' }}
           
-          # LOGIC: Use Manual Input if provided, otherwise use Default 'btc_thb'
-          SYMBOL: ${{ github.event.inputs.manual_symbol || 'btc_thb' }}
+          # LOGIC: Use Manual Input if provided, otherwise use Default 'BTC_THB'
+          SYMBOL: ${{ github.event.inputs.manual_symbol || 'BTC_THB' }}
         
         run: python main.py
