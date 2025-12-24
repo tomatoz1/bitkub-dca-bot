@@ -12,8 +12,8 @@ import sys
 # Load secrets from GitHub Environment
 API_KEY = os.environ.get("API_KEY")
 API_SECRET = os.environ.get("API_SECRET")
-# Default to 500 THB if not set
-BUY_AMOUNT = float(os.environ.get("BUY_AMOUNT", "500"))
+# Default to 108 THB if not set
+BUY_AMOUNT = float(os.environ.get("BUY_AMOUNT", "108"))
 # Default to 'BTC_THB' if not set
 SYMBOL = os.environ.get("SYMBOL", "BTC_THB")
 

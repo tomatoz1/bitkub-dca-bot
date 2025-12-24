@@ -6,7 +6,7 @@ on:
   # -------------------------------------------------------
   schedule:
     # OPTION 1: DAILY at 09:00 AM Bangkok Time (02:00 UTC)
-    # - cron: '0 2 * * *'
+    - cron: '0 2 * * *'
 
     # OPTION 2: WEEKLY on Monday at 09:00 AM BKK
     # - cron: '0 2 * * 1'
@@ -18,7 +18,7 @@ on:
     # - cron: '0 2,14 * * *'
 
     # OPTION 5: EVERY 10 MINUTES <-- CURRENT
-    - cron: '*/10 * * * *'
+    # - cron: '*/10 * * * *'
 
   # -------------------------------------------------------
   # MANUAL TRIGGER: Allows you to run this on demand
@@ -28,7 +28,7 @@ on:
       manual_amount:
         description: 'Amount to Buy (THB)'
         required: false
-        default: '500'
+        default: '108'
       manual_symbol:
         description: 'Crypto Pair (e.g., BTC_THB)'
         required: false
@@ -37,7 +37,7 @@ on:
 jobs:
   trade:
     runs-on: ubuntu-latest
-    environment: test
+    environment: production
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -55,8 +55,8 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           API_SECRET: ${{ secrets.API_SECRET }}
           
-          # LOGIC: Use Manual Input if provided, otherwise use Default '500'
-          BUY_AMOUNT: ${{ github.event.inputs.manual_amount || '500' }}
+          # LOGIC: Use Manual Input if provided, otherwise use Default '108'
+          BUY_AMOUNT: ${{ github.event.inputs.manual_amount || '108' }}
           
           # LOGIC: Use Manual Input if provided, otherwise use Default 'BTC_THB'
           SYMBOL: ${{ github.event.inputs.manual_symbol || 'BTC_THB' }}
