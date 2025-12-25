@@ -129,5 +129,12 @@ This runs a simulated buy order scenario and validates the output format.
 
 This software is for educational purposes only. Automated trading carries risks. Ensure you test with small amounts and understand the code before using significant funds. The authors are not responsible for any financial losses.
 
+## 💰 Donate
+
+If you find this bot helpful, you can support the development by donating:
+
+- **BTC Address:** `bc1qm7ktthfyeghpmdqjcnumfxse4d8h0g3pgujxr6`
+- **LN Address:** `mumbledpunch57@walletofsatoshi.com`
+
 ---
 *Maintained by @PattoMotto*
