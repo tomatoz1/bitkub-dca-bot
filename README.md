@@ -42,6 +42,7 @@ Click the **Fork** button via the top right of this page to create your own copy
 1. Go to your repository **Settings** > **Environments**.
 2. Create a new environment named `production`.
 3. Add your `API_KEY` and `API_SECRET` as **Environment Secrets** within the `production` environment.
+4. (Optional) Add `BUY_AMOUNT` and `SYMBOL` as **Environment Variables** to override the defaults.
 
 ### 3. Schedule Options
 By default, the bot runs **Daily**. You can customize this by uncommenting your preferred schedule in `.github/workflows/dca_bot.yml`:
