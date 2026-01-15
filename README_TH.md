@@ -42,6 +42,7 @@
 1. ไปที่เมนู **Settings** > **Environments** ของ repository
 2. สร้าง environment ใหม่ชื่อ `production`
 3. เพิ่ม `API_KEY` และ `API_SECRET` ใน **Environment Secrets** ภายใต้ `production` environment
+4. (ทางเลือก) เพิ่ม `BUY_AMOUNT` และ `SYMBOL` ใน **Environment Variables** หากต้องการเปลี่ยนค่าเริ่มต้น
 
 ### 3. ตัวเลือกการตั้งเวลา (Schedule Options)
 โดยปกติ บอทจะทำงาน **ทุกวัน** (Daily) คุณสามารถเปลี่ยนการตั้งค่านี้โดยการ uncomment บรรทัดที่ต้องการในไฟล์ `.github/workflows/dca_bot.yml`:

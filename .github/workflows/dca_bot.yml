@@ -55,10 +55,10 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           API_SECRET: ${{ secrets.API_SECRET }}
           
-          # LOGIC: Use Manual Input if provided, otherwise use Default '108'
-          BUY_AMOUNT: ${{ github.event.inputs.manual_amount || '108' }}
+          # LOGIC: Use Manual Input if provided, otherwise use Repo Variable, otherwise use Default '108'
+          BUY_AMOUNT: ${{ github.event.inputs.manual_amount || vars.BUY_AMOUNT || '108' }}
           
-          # LOGIC: Use Manual Input if provided, otherwise use Default 'BTC_THB'
-          SYMBOL: ${{ github.event.inputs.manual_symbol || 'BTC_THB' }}
+          # LOGIC: Use Manual Input if provided, otherwise use Repo Variable, otherwise use Default 'BTC_THB'
+          SYMBOL: ${{ github.event.inputs.manual_symbol || vars.SYMBOL || 'BTC_THB' }}
         
         run: python main.py
